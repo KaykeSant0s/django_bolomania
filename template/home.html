@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Bolos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FF3300;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .login-btn {
+            background-color: white;
+            color: #FF3300;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .login-btn:hover {
+            background-color: #ffe5e0;
+            color: #d72600;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        footer{
+            background-color: #FF3300;
+            padding-left: 650px;
+            color: white;
+            font-size: 10px;
+            display: flex;
+            text-align: center;
+            position: sticky;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span>Loja de Bolos</span>
+        <div class="header-right">
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="database.html">Banco de Dados</a>
+            </nav>
+            <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Bem-vindo à nossa loja de bolos!</h1>
+        <p>Aqui você encontra os melhores bolos artesanais, feitos com carinho e ingredientes de qualidade.</p>
+        <p>Navegue pelo catálogo e escolha seu bolo favorito!</p><br>
+    </div>
+</body>
+<footer>
+    <p>&copy PI7</p>
+</footer>
+</html>

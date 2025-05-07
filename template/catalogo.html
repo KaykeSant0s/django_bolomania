@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Bolos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FF3300;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        footer{
+            background-color: #FF3300;
+            padding-left: 650px;
+            text-align: center;
+            color: white;
+            font-size: 10px;
+            display: flex;
+            position: sticky;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .login-btn {
+            background-color: white;
+            color: #FF3300;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .login-btn:hover {
+            background-color: #ffe5e0;
+            color: #d72600;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .filters {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .bolo {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function filterCatalog() {
+            let search = document.getElementById("search").value.toLowerCase();
+            let category = document.getElementById("category").value;
+            let items = document.getElementsByClassName("bolo");
+
+            for (let item of items) {
+                let name = item.getAttribute("data-name").toLowerCase();
+                let type = item.getAttribute("data-type");
+
+                if ((name.includes(search) || search === "") && (type === category || category === "all")) {
+                    item.style.display = "inline-block";
+                } else {
+                    item.style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <span>Loja de Bolos</span>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="database.html">Banco de Dados</a>
+        </nav>
+        <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+    </header>
+    <div class="container">
+        <h1>Catálogo de Bolos</h1>
+        <div class="filters">
+            <input type="text" id="search" placeholder="Buscar bolo..." onkeyup="filterCatalog()">
+            <select id="category" onchange="filterCatalog()">
+                <option value="all">Todos</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="morango">Morango</option>
+                <option value="baunilha">Baunilha</option>
+            </select>
+        </div>
+        <div id="catalog">
+            <div class="bolo" data-name="Bolo de Chocolate" data-type="chocolate">Bolo de Chocolate - R$ 30,00</div>
+            <div class="bolo" data-name="Bolo de Morango" data-type="morango">Bolo de Morango - R$ 35,00</div>
+            <div class="bolo" data-name="Bolo de Baunilha" data-type="baunilha">Bolo de Baunilha - R$ 25,00</div>
+            <div class="bolo" data-name="Bolo Trufado" data-type="chocolate">Bolo Trufado - R$ 40,00</div>
+        </div>
+    </div>
+</body>
+<footer>
+<p>&copy PI7</p>
+</footer>
+</html>
