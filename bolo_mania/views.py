@@ -26,7 +26,7 @@ def contact_page(request):
 
 def cadastro_page(request):
     if request.method == "POST":
-        form = UserCreationForm(request.POST)
+        form = UserCreationForm(request.POST or None)
         if form.is_valid():
             form.save()
             messages.success(request, "Cadastro realizado com sucesso!")
