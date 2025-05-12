@@ -20,7 +20,7 @@ from .views import home_page, about_page, contact_page
 from .views import cadastro_page
 
 urlpatterns = [
-    path('', home_page),
+    path('home/', home_page),
     path('about/', about_page),
 	path('contact/', contact_page, ),
     path('cadastro/', cadastro_page, name='cadastro'),
