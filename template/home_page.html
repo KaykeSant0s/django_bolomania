@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <title>Loja de Bolos</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+        <span>Loja de Bolos</span>
+        <div class="header-right">
+            <nav>
+                <a href="home_page.html">Início</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="database.html">Encomendas</a>
+            </nav>
+            <button class="login-btn" onclick="linux.location.href='PROJETO_PAP/src/template/contact/login.html'">Login</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Bem-vindo à nossa loja de bolos!</h1>
+        <p>Aqui você encontra os melhores bolos artesanais, feitos com carinho e ingredientes de qualidade.</p>
+        <p>Navegue pelo catálogo e escolha seu bolo favorito!</p><br>
+    </div>
+</body>
+<footer>
+    <p>&copy PI7</p>
+</footer>
+</html>

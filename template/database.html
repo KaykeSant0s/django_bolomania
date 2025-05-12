@@ -1,108 +1,24 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
     <title>Lista de Bolo</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: white;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #FF3300;
-            padding: 20px;
-            text-align: center;
-            color: white;
-            font-size: 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        footer{
-            background-color: #FF3300;
-            padding-left: 650px;
-            text-align: center;
-            color: white;
-            font-size: 10px;
-            display: flex;
-            position: sticky;
-        }
-        nav {
-            display: flex;
-            gap: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 5px;
-        }
-        .login-btn {
-            background-color: white;
-            color: #FF3300;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.2s, color 0.2s;
-        }
-        .login-btn:hover {
-            background-color: #ffe5e0;
-            color: #d72600;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            text-align: center;
-            padding: 20px;
-            min-height: 100vh;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: #FF3300;
-            color: white;
-        }
-        .buttons {
-            margin-top: 20px;
-        }
-        .buttons button {
-            background-color: #FF3300;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-        .buttons button:hover {
-            background-color: #cc2900;
-        }
+  
     </style>
 </head>
 <body>
     <header>
         <span>Loja de Bolos</span>
         <nav>
-            <a href="index.html">Início</a>
-            <a href="catalogo.html">Catálogo</a>
-            <a href="database.html">lista de bolo</a>
+           <a href="home_page.html">Início</a>
+            <a href=".catalogo.html">Catálogo</a>
+            <a href=".database.html">lista de bolo</a>
         </nav>
         <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
     </header>
